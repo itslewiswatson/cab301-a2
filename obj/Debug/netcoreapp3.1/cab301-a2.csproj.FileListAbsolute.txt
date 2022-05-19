@@ -1,0 +1,14 @@
+D:\dev\cab301-a2\obj\Debug\netcoreapp3.1\cab301-a2.csproj.AssemblyReference.cache
+D:\dev\cab301-a2\obj\Debug\netcoreapp3.1\cab301-a2.GeneratedMSBuildEditorConfig.editorconfig
+D:\dev\cab301-a2\obj\Debug\netcoreapp3.1\cab301-a2.AssemblyInfoInputs.cache
+D:\dev\cab301-a2\obj\Debug\netcoreapp3.1\cab301-a2.AssemblyInfo.cs
+D:\dev\cab301-a2\obj\Debug\netcoreapp3.1\cab301-a2.csproj.CoreCompileInputs.cache
+D:\dev\cab301-a2\bin\Debug\netcoreapp3.1\cab301-a2.exe
+D:\dev\cab301-a2\bin\Debug\netcoreapp3.1\cab301-a2.deps.json
+D:\dev\cab301-a2\bin\Debug\netcoreapp3.1\cab301-a2.runtimeconfig.json
+D:\dev\cab301-a2\bin\Debug\netcoreapp3.1\cab301-a2.runtimeconfig.dev.json
+D:\dev\cab301-a2\bin\Debug\netcoreapp3.1\cab301-a2.dll
+D:\dev\cab301-a2\bin\Debug\netcoreapp3.1\cab301-a2.pdb
+D:\dev\cab301-a2\obj\Debug\netcoreapp3.1\cab301-a2.dll
+D:\dev\cab301-a2\obj\Debug\netcoreapp3.1\cab301-a2.pdb
+D:\dev\cab301-a2\obj\Debug\netcoreapp3.1\cab301-a2.genruntimeconfig.cache
