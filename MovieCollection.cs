@@ -86,6 +86,9 @@ public class MovieCollection : IMovieCollection
 		return Insert(movie, root);
 	}
 
+	// Insert a movie into a binary tree at its correctly sorted location
+	// Pre-condition: nil
+	// Post-condition: the movie is added to the collection and returned true or it returns the recursive value of itself on a different node
 	private bool Insert(IMovie movie, BTreeNode r)
     {
 		if (movie.CompareTo(r.Movie) < 0)
@@ -195,6 +198,10 @@ public class MovieCollection : IMovieCollection
 		return Search(movie, root);
 	}
 
+	// Search for a movie against a tree node
+	// pre: nil
+	// post: return true if the movie matches the current node;
+	//	     otherwise, return the recursive result of a neighbouring node.
 	private bool Search(IMovie movie, BTreeNode r)
     {
 		if (r == null)
@@ -226,6 +233,10 @@ public class MovieCollection : IMovieCollection
 		return Search(movietitle, root);
 	}
 
+	// Search for a movie by its title against a binary tree node
+	// pre: nil
+	// post: return true if the movie matches the current node;
+	//	     otherwise, return the recursive result of a neighbouring node.
 	private IMovie Search(string movietitle, BTreeNode r)
     {
 		if (movietitle.CompareTo(r.Movie.Title) == 0)
