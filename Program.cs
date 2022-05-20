@@ -49,7 +49,7 @@ class Program {
         
 
         MovieCollection fc = new MovieCollection();
-        Movie td = new Movie("Taxi Driver", MovieGenre.Drama, MovieClassification.M15Plus, 120, 5);
+        Movie td = new Movie("Taxi Driver", MovieGenre.Drama, MovieClassification.M15Plus, 120, 17);
         fc.Insert(td);
 
         Movie dda = new Movie("Dog Day Afternoon", MovieGenre.Drama, MovieClassification.M15Plus, 120, 5);
@@ -59,7 +59,7 @@ class Program {
         fc.Insert(dda1);
 
         Movie gf = new Movie("Goodfellas", MovieGenre.Drama, MovieClassification.M15Plus, 200, 8);
-        fc.Insert(new Movie("Goodfellas"));
+        fc.Insert(gf);
 
         fc.Insert(new Movie("28 Weeks Later"));
         fc.Insert(new Movie("The Deer Hunter"));
@@ -88,9 +88,47 @@ class Program {
             }
         }
 
-        fc.Clear();
+        //fc.Clear();
 
         Console.WriteLine("--");
+
+        td.AddBorrower(new Member("Lewis", "Watson"));
+        td.AddBorrower(new Member("Quagmire", "Watson"));
+        td.AddBorrower(new Member("David", "Watson"));
+        td.AddBorrower(new Member("Aaron", "Watson"));
+        td.AddBorrower(new Member("Tom", "Watson"));
+        td.AddBorrower(new Member("Tim", "Watson"));
+        td.AddBorrower(new Member("Gerald", "Watson"));
+        td.AddBorrower(new Member("Dwayne", "Watson"));
+        td.AddBorrower(new Member("Clark", "Watson"));
+        td.AddBorrower(new Member("Jim", "Watson"));
+        td.AddBorrower(new Member("Jackie", "Watson"));
+        td.AddBorrower(new Member("Katie", "Watson"));
+        td.AddBorrower(new Member("Fred", "Watson"));
+        td.AddBorrower(new Member("Jenny", "Watson"));
+        td.AddBorrower(new Member("Wanda", "Watson"));
+        td.AddBorrower(new Member("Spunk", "Watson"));
+        td.AddBorrower(new Member("Bob", "Watson"));
+        td.AddBorrower(new Member("Bob", "Watson"));
+        td.AddBorrower(new Member("Bob", "Watson"));
+        td.AddBorrower(new Member("Bob", "Watson"));
+        td.AddBorrower(new Member("Bob", "Watson"));
+
+        dda.AddBorrower(new Member("Lewis", "Watson"));
+        dda.AddBorrower(new Member("Quagmire", "Watson"));
+        dda.AddBorrower(new Member("David", "Watson"));
+        dda.AddBorrower(new Member("Aaron", "Watson"));
+        dda.AddBorrower(new Member("Tom", "Watson"));
+        dda.AddBorrower(new Member("Tim", "Watson"));
+        dda.AddBorrower(new Member("Gerald", "Watson"));
+
+        gf.AddBorrower(new Member("Lewis", "Watson"));
+        gf.AddBorrower(new Member("Quagmire", "Watson"));
+        gf.AddBorrower(new Member("Tom", "Watson"));
+
+        Console.WriteLine("--");
+
+        // td.RemoveBorrower(new Member("Lewis", "Watson"));
 
         IMovie[] shit2 = fc.ToArray();
 
@@ -106,6 +144,7 @@ class Program {
             }
         }
 
+        /*
         fc.Insert(new Movie("28 Weeks Later"));
         fc.Insert(new Movie("The Deer Hunter"));
         fc.Insert(new Movie("Casino"));
@@ -134,6 +173,7 @@ class Program {
                 Console.WriteLine(shit3[i].ToString());
             }
         }
+        */
 
         Console.Read();
     }
