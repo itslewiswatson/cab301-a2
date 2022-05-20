@@ -46,13 +46,33 @@ class Program {
         Console.WriteLine("mc.Search(Joshua, Smith) -> " + search2.ToString());
         */
 
+        
+
         MovieCollection fc = new MovieCollection();
-        fc.Insert(new Movie("Taxi Driver"));
-        fc.Insert(new Movie("Dog Day Afternoon"));
+        Movie td = new Movie("Taxi Driver", MovieGenre.Drama, MovieClassification.M15Plus, 120, 5);
+        fc.Insert(td);
+
+        Movie dda = new Movie("Dog Day Afternoon", MovieGenre.Drama, MovieClassification.M15Plus, 120, 5);
+        fc.Insert(dda);
+
+        Movie dda1 = new Movie("Dog Day Afternoon", MovieGenre.Drama, MovieClassification.M15Plus, 250, 8);
+        fc.Insert(dda1);
+
+        Movie gf = new Movie("Goodfellas", MovieGenre.Drama, MovieClassification.M15Plus, 200, 8);
         fc.Insert(new Movie("Goodfellas"));
+
         fc.Insert(new Movie("28 Weeks Later"));
         fc.Insert(new Movie("The Deer Hunter"));
         fc.Insert(new Movie("Casino"));
+        fc.Insert(new Movie("Casino"));
+        fc.Insert(new Movie("Casino"));
+        fc.Insert(new Movie("Casino"));
+        fc.Insert(new Movie("The Irishman"));
+        fc.Insert(new Movie("Spider-Man"));
+        fc.Insert(new Movie("Citizen Kane"));
+        fc.Insert(new Movie("Jumanji"));
+        fc.Insert(new Movie("Meet The Fockers"));
+        fc.Insert(new Movie("A Bug's Life"));
 
         IMovie[] shit = fc.ToArray();
 
@@ -65,6 +85,53 @@ class Program {
             else
             {
                 Console.WriteLine(shit[i].ToString());
+            }
+        }
+
+        fc.Clear();
+
+        Console.WriteLine("--");
+
+        IMovie[] shit2 = fc.ToArray();
+
+        for (int i = 0; i < shit2.Length; i++)
+        {
+            if (shit2[i] == null)
+            {
+                Console.WriteLine("null detected at index = " + i.ToString());
+            }
+            else
+            {
+                Console.WriteLine(shit2[i].ToString());
+            }
+        }
+
+        fc.Insert(new Movie("28 Weeks Later"));
+        fc.Insert(new Movie("The Deer Hunter"));
+        fc.Insert(new Movie("Casino"));
+        fc.Insert(new Movie("Casino"));
+        fc.Insert(new Movie("Casino"));
+        fc.Insert(new Movie("Casino"));
+        fc.Insert(new Movie("The Irishman"));
+        fc.Insert(new Movie("Spider-Man"));
+        fc.Insert(new Movie("Citizen Kane"));
+        fc.Insert(new Movie("Jumanji"));
+        fc.Insert(new Movie("Meet The Fockers"));
+        fc.Insert(new Movie("A Bug's Life"));
+
+        Console.WriteLine("--");
+
+        IMovie[] shit3 = fc.ToArray();
+
+        for (int i = 0; i < shit3.Length; i++)
+        {
+            if (shit3[i] == null)
+            {
+                Console.WriteLine("null detected at index = " + i.ToString());
+            }
+            else
+            {
+                Console.WriteLine(shit3[i].ToString());
             }
         }
 

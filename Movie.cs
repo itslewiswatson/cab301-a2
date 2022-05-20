@@ -68,18 +68,13 @@ public class Movie : IMovie
     //                  if the member is in the borrowers list, do not add the member to the borrowers list and return false.  
     public bool AddBorrower(IMember member)
     {
-        if (availablecopies >= 1)
+        if (availablecopies >= 1 && !borrowers.IsFull())
         {
             bool exists = borrowers.Search(member);
-            if (!exists)
-            {
-                borrowers.Add(member);
-            }
-            else
-            {
+            if (exists)
                 return false;
-            }
 
+            borrowers.Add(member);
             availablecopies--;
             noborrows++;
 

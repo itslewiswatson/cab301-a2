@@ -257,6 +257,10 @@ public class MovieCollection : IMovieCollection
 
 		return movies;
 	}
+
+	// Binary in-order tree traversal
+	// Pre-condition: r is an ordered binary tree, movies is an empty array of type IMovie and iter is an integer equal to or greater than zero
+	// Post-condition: movies array contains every node from the binary tree r in order
 	private void Inorder(BTreeNode r, ref IMovie[] movies, ref int iter)
     {
 		if (r != null)
@@ -272,6 +276,7 @@ public class MovieCollection : IMovieCollection
 	// Post-condition: all the movies have been removed from this movie collection 
 	public void Clear()
 	{
+		count = 0;
 		root = null;
 	}
 }
