@@ -79,6 +79,7 @@ public class MovieCollection : IMovieCollection
 
 		if (root == null)
         {
+			count++;
 			root = new BTreeNode(movie);
 			return true;
         }
@@ -186,6 +187,7 @@ public class MovieCollection : IMovieCollection
 			}
 		}
 
+		count--;
 		return true;
 	}
 
@@ -227,8 +229,7 @@ public class MovieCollection : IMovieCollection
 	//	     otherwise, return null.
 	public IMovie Search(string movietitle)
 	{
-		if (root == null)
-			return null;
+		if (root == null) return null;
 
 		return Search(movietitle, root);
 	}
@@ -239,11 +240,13 @@ public class MovieCollection : IMovieCollection
 	//	     otherwise, return the recursive result of a neighbouring node.
 	private IMovie Search(string movietitle, BTreeNode r)
     {
+		if (r == null) return null;
+
 		if (movietitle.CompareTo(r.Movie.Title) == 0)
 		{
 			return r.Movie;
 		}
-		else if (movietitle.CompareTo(r.Movie) < 0)
+		else if (movietitle.CompareTo(r.Movie.Title) < 0)
 		{
 			return Search(movietitle, r.LChild);
 		}
@@ -258,10 +261,9 @@ public class MovieCollection : IMovieCollection
 	// Post-condition: return an array of movies that are stored in dictionary order by their titles
 	public IMovie[] ToArray()
 	{
-		IMovie[] movies = new IMovie[count + 1];
+		if (count == 0) return new IMovie[0];
 
-		if (root == null)
-			return movies;
+		IMovie[] movies = new IMovie[count + 1];
 
 		int i = 0;
 		Inorder(root, ref movies, ref i);
@@ -291,8 +293,3 @@ public class MovieCollection : IMovieCollection
 		root = null;
 	}
 }
-
-
-
-
-

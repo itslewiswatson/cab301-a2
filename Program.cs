@@ -49,6 +49,20 @@ class Program {
         
 
         MovieCollection fc = new MovieCollection();
+        IMovie[] shit = fc.ToArray();
+
+        for (int i = 0; i < shit.Length; i++)
+        {
+            if (shit[i] == null)
+            {
+                Console.WriteLine("null detected at index = " + i.ToString());
+            }
+            else
+            {
+                Console.WriteLine(shit[i].ToString());
+            }
+        }
+
         Movie td = new Movie("Taxi Driver", MovieGenre.Drama, MovieClassification.M15Plus, 120, 17);
         fc.Insert(td);
 
@@ -74,6 +88,7 @@ class Program {
         fc.Insert(new Movie("Meet The Fockers"));
         fc.Insert(new Movie("A Bug's Life"));
 
+        /*
         IMovie[] shit = fc.ToArray();
 
         for (int i = 0; i < shit.Length; i++)
@@ -87,6 +102,7 @@ class Program {
                 Console.WriteLine(shit[i].ToString());
             }
         }
+        */
 
         //fc.Clear();
 
@@ -174,6 +190,8 @@ class Program {
             }
         }
         */
+
+        fc.Search("Casino");
 
         Console.Read();
     }
